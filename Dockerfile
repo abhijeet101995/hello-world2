@@ -1,6 +1,6 @@
 FROM ubuntu.latest 
 
-LABEL DEV= "Abhijeet"
+LABEL dev="Abhijeet"
 
 RUN apt -get update
 Run apt -get install unzip -y
