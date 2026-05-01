@@ -6,8 +6,11 @@ RUN apt-get install apache2 -y
 
 ADD https://templatemo.com/download/templatemo_614_quantix_saas /var/www/html/templatemo_614_quantix_saas.zip
 
-WORKDIR /var/www/html/templatemo_614_quantix_saas.zip
-RUN mv/templatemo_614_quantix_saas.zip/* /var/www/html/
+WORKDIR /var/www/html/
+
+RUN unzip templatemo_614_quantix_saas.zip
+RUN mv templatemo_614_quantix_saas.zip/* /var/www/html/
+
 
 EXPOSE 80
 
