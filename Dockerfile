@@ -9,7 +9,7 @@ ADD https://templatemo.com/download/templatemo_614_quantix_saas /var/www/html/te
 WORKDIR /var/www/html/
 
 RUN unzip templatemo_614_quantix_saas.zip
-RUN mv templatemo_614_quantix_saas.zip/* /var/www/html/
+RUN mv templatemo_614_quantix_saas/* /var/www/html/
 
 
 EXPOSE 80
