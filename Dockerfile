@@ -1,7 +1,5 @@
 FROM ubuntu.latest 
 
-LABEL dev="Abhijeet"
-
 RUN apt -get update
 Run apt -get install unzip -y
 RUN apt -get install apache2 -y
