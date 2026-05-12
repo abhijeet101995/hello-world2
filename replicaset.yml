@@ -4,17 +4,7 @@ metadata:
   name: rs
   labels:
     app: rs
-
- spec:
-    replicas: 3
-    template:
-      metadata:
-        name: nginx-pod
-        labels:
-          app: rcapp
-
-app: rs
-spec:
+  spec:
        replica: 3
        template:
               metadata:
