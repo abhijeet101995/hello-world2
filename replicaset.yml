@@ -2,22 +2,33 @@ apiversion: apps/v1
 kind: ReplicaSet
 metadata:
   name: rs
-  app: rs
+  labels:
+    app: rs
+
+ spec:
+    replicas: 3
+    template:
+      metadata:
+        name: nginx-pod
+        labels:
+          app: rcapp
+
+app: rs
 spec:
        replica: 3
        template:
               metadata:
             name: nginx-pod
             labels:
-                     app: rcapp
+                     app: rcapp   
     spec: 
     container: 
           -image: nginx:latest
           ports:
-                container: 80
+                containerPort: 80
                 name: nginxco
 
-controler:
+selector:
 matchLabels :
           app: rcapp
 
