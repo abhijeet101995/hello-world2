@@ -1,0 +1,27 @@
+apiversion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs
+  app: rs
+
+ spec:
+       replica: 3
+       template:
+              metadata:
+            name: nginx-pod
+            labels:
+                     app: rcapp
+    spec: 
+    container: 
+          -image: nginx:latest
+          ports:
+                container: 80
+                name: nginxco
+
+controler:
+matchLabels :
+          app: rcapp
+
+        
+
+
