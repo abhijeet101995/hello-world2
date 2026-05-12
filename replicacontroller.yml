@@ -9,7 +9,7 @@ spec:
     template: 
         metadata:
             name: nginx-pod
-              labels:
+            labels:
                     app: rcapp
 spec: 
     container: 
