@@ -5,16 +5,19 @@ metadata:
   name: nginx-pod
 
 spec:
-    template:
-        metadata:
-        label: 
-            name: cw-pod
-          containers:
-                - name: nginx
-                  image: amazon/cloudwatch-agent
-                 ports:
-                      containerPort: 80
-                      name :cloudwatch-container
   selector:
-        matchlabels:
-              app: cw-pod
+    matchLabels:
+      app: cw-pod
+
+  template:
+    metadata:
+      labels:
+        app: cw-pod
+
+    spec:
+      containers:
+      - name: nginx
+        image: amazon/cloudwatch-agent
+        ports:
+        - containerPort: 80
+          name: cloudwatch-container
