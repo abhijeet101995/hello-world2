@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: nginx-pod
+
+spec:
+    template:
+        metadata:
+        label: 
+            app: cw-pod
+            name: cw-pod
+          containers:
+                - name: nginx
+                 -image: amazon/cloudwatch-agent
+                 ports:
+                      containerPort: 80
+                      name :cloudwatch-container
+  selector:
+        matchlabels:
+              app: cw-pod
