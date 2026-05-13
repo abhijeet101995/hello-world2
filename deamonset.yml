@@ -8,7 +8,6 @@ spec:
     template:
         metadata:
         label: 
-            app: cw-pod
             name: cw-pod
           containers:
                 - name: nginx
