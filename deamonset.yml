@@ -12,7 +12,7 @@ spec:
             name: cw-pod
           containers:
                 - name: nginx
-                 -image: amazon/cloudwatch-agent
+                  image: amazon/cloudwatch-agent
                  ports:
                       containerPort: 80
                       name :cloudwatch-container
