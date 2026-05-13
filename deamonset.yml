@@ -19,6 +19,5 @@ spec:
       - name: nginx
         image: amazon/cloudwatch-agent
         ports:
-       ports:
-          - containerPort: 80
-            name: cw-port
+        - containerPort: 80
+          name: cw-port
