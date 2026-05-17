@@ -3,7 +3,6 @@ kind: pod
 metadata:
   app: pod
   app:nginx
-
 spec:
   container:
     image: nginx
