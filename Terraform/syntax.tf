@@ -3,8 +3,7 @@ provider "aws" {
   profile = "configs"
 }
 
-resource "aws_ec2" "webserver"
-{
+resource "aws_ec2" "webserver"{
    key_name = "abhijeet"
    ami= "ami-0741dc526e1106ae5"
    instance_type="t3.micro"
